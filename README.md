@@ -51,20 +51,31 @@
 ---
 
 ### **2.2 Creación del Índice del Genoma**
+
 1. **¿Qué es un índice?**
    - Un índice es una estructura de datos que permite buscar coincidencias en el genoma de referencia de manera eficiente.
 
 2. **Crear índice con BWA:**
+
    ```bash
    bwa index refs/ebola_ref.fa
+   ls refs/
+   ebola_ref.fa  ebola_ref.fa.amb  ebola_ref.fa.ann  ebola_ref.fa.bwt  ebola_ref.fa.pac  ebola_ref.fa.sa
    ```
-3. **Crear índice con Bowtie2:**
+   
+4. **Crear índice con Bowtie2:**
+
    ```bash
    bowtie2-build refs/ebola_ref.fa refs/ebola_ref
+   ebola_ref.1.bt2  ebola_ref.3.bt2  ebola_ref.fa ebola_ref.rev.2.bt2
+   ebola_ref.2.bt2  ebola_ref.4.bt2  ebola_ref.rev.1.bt2
    ```
-4. **Verificar los archivos generados:**
+   
+5. **Verificar los archivos generados:**
    ```bash
    ls refs/
+   ebola_ref.1.bt2  ebola_ref.3.bt2  ebola_ref.fa      ebola_ref.fa.ann  ebola_ref.fa.pac  ebola_ref.rev.1.bt2
+   ebola_ref.2.bt2  ebola_ref.4.bt2  ebola_ref.fa.amb  ebola_ref.fa.bwt  ebola_ref.fa.sa   ebola_ref.rev.2.bt2
    ```
 
 ---
