@@ -166,7 +166,53 @@ Posibles problemas: baja calidad de datos o un genoma de referencia incompleto.
 - Generar estadísticas:
   ```bash
   samtools flagstat bwa_output.sam
+  20740 + 0 in total (QC-passed reads + QC-failed reads)
+  20000 + 0 primary
+  0 + 0 secondary
+  740 + 0 supplementary
+  0 + 0 duplicates
+  0 + 0 primary duplicates
+  15279 + 0 mapped (73.67% : N/A)
+  14539 + 0 primary mapped (72.69% : N/A)
+  20000 + 0 paired in sequencing
+  10000 + 0 read1
+  10000 + 0 read2
+  14480 + 0 properly paired (72.40% : N/A)
+  14528 + 0 with itself and mate mapped
+  11 + 0 singletons (0.05% : N/A)
+  0 + 0 with mate mapped to a different chr
+  0 + 0 with mate mapped to a different chr (mapQ>=5)
+  ```
+
+  **Tasa de alineación:**
+    - 73.67% de las lecturas totales están alineadas, lo que es aceptable en datos reales.
+    - 72.40% de los pares están alineados correctamente.
+
+  **Problemas mínimos:**
+    - No hay duplicados ni lecturas alineadas en cromosomas incorrectos.
+
+  **Mejoras posibles:**
+    - Evaluar las lecturas no alineadas (26.33%) para verificar calidad o errores.
+    - Revisar las lecturas individuales (singletons) para descartar problemas en el par.
+
+  ```bash
   samtools flagstat bowtie2_output.sam
+  20000 + 0 in total (QC-passed reads + QC-failed reads)
+  20000 + 0 primary
+  0 + 0 secondary
+  0 + 0 supplementary
+  0 + 0 duplicates
+  0 + 0 primary duplicates
+  12537 + 0 mapped (62.69% : N/A)
+  12537 + 0 primary mapped (62.69% : N/A)
+  20000 + 0 paired in sequencing
+  10000 + 0 read1
+  10000 + 0 read2
+  9828 + 0 properly paired (49.14% : N/A)
+  11482 + 0 with itself and mate mapped
+  1055 + 0 singletons (5.27% : N/A)
+  0 + 0 with mate mapped to a different chr
+  0 + 0 with mate mapped to a different chr (mapQ>=5)
   ```
 
 #### **3. Conversión a BAM y visualización**
