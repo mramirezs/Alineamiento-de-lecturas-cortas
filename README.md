@@ -142,6 +142,26 @@ Posibles problemas: baja calidad de datos o un genoma de referencia incompleto.
   XO:i:0	XG:i:0	NM:i:3	MD:Z:0A44A14T40	YT:Z:UP
   ```
 
+  **Descripción breve de los campos solicitados:**
+
+  **Identificador de la lectura (QNAME):**  
+    - Columna: **1**  
+    - **`SRR1972739.1`**  
+      - Identifica de manera única a la lectura dentro del archivo FASTQ o conjunto de datos procesados.  
+      - Útil para rastrear alineamientos de lecturas individuales.
+
+  **Coordenadas del alineamiento (RNAME y POS):**  
+    - **RNAME (Columna 3):** **`AF086833.2`**  
+      - Indica el nombre de la secuencia de referencia (e.g., genoma o cromosoma) donde se alineó la lectura.  
+    - **POS (Columna 4):** **`15600`**  
+      - Es la posición inicial en el genoma de referencia donde comienza la alineación (1-indexado).
+
+  **Calidad del mapeo (MAPQ):**  
+    - Columna: **5**  
+    - **`40`**  
+      - Representa la confianza en que la lectura está alineada correctamente en la posición reportada.  
+      - Valores altos (e.g., 40-60) indican alta confianza; valores bajos (<20) sugieren que la alineación puede no ser confiable.
+        
 #### **2. Estadísticas básicas con Samtools**
 - Generar estadísticas:
   ```bash
