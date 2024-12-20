@@ -224,8 +224,9 @@ Posibles problemas: baja calidad de datos o un genoma de referencia incompleto.
   ```
 - Visualizar alineaciones:
   ```bash
-  samtools index bwa_output.bam
-  samtools tview bwa_output.bam refs/ebola_ref.fa
+  samtools sort bwa_output.bam -o bwa_output.sorted.bam
+  samtools index bwa_output.sorted.bam
+  samtools tview bwa_output.sorted.bam refs/ebola_ref.fa
   ```
 
 ---
