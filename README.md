@@ -136,7 +136,7 @@ Posibles problemas: baja calidad de datos o un genoma de referencia incompleto.
     
 - Ejemplo de línea:
   ```
-  SRR1972739.1   83   gi|10141003|gb|AF086833.2|   15684   60   69M32S   =   15600   -153   TTTAGATTTAAC
+  SRR1972739.1	137	AF086833.2	15600	40	101M	=	15600	0	GTATAATCGTGCTCACCTTCATCTAACTAA
   ```
 
 #### **2. Estadísticas básicas con Samtools**
