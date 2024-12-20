@@ -95,7 +95,23 @@
 - **Modo paired-end:**
   ```bash
   bowtie2 -x refs/ebola_ref -1 data/SRR1972739_1.fastq -2 data/SRR1972739_2.fastq -S bowtie2_output.sam
+  10000 reads; of these:
+  10000 (100.00%) were paired; of these:
+    5086 (50.86%) aligned concordantly 0 times
+    4914 (49.14%) aligned concordantly exactly 1 time
+    0 (0.00%) aligned concordantly >1 times
+    ----
+    5086 pairs aligned concordantly 0 times; of these:
+      827 (16.26%) aligned discordantly 1 time
+    ----
+    4259 pairs aligned 0 times concordantly or discordantly; of these:
+      8518 mates make up the pairs; of these:
+        7463 (87.61%) aligned 0 times
+        1055 (12.39%) aligned exactly 1 time
+        0 (0.00%) aligned >1 times
+  62.69% overall alignment rate
   ```
+  
 - **Verificar resultados iniciales:**
   ```bash
   head -n 20 bowtie2_output.sam
