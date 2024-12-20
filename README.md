@@ -111,6 +111,14 @@
         0 (0.00%) aligned >1 times
   62.69% overall alignment rate
   ```
+
+  1. **Total:** Se procesaron 10,000 pares de lecturas, todas en modo pareado (*paired-end*).
+  2. **Concordantes:** El 49.14% se alinearon correctamente, mientras que el 50.86% no lograron alinearse en posiciones esperadas.
+  3. **Discordantes:** Un 16.26% de los pares no concordantes se alinearon en posiciones inesperadas.
+  4. **Individuales:** De las lecturas no alineadas, el 87.61% no se alinearon y el 12.39% lograron al menos una alineación.
+  5. **Tasa total:** El 62.69% de las lecturas se alinearon exitosamente, lo cual es aceptable pero podría mejorarse. 
+
+Posibles problemas: baja calidad de datos o un genoma de referencia incompleto.
   
 - **Verificar resultados iniciales:**
   ```bash
